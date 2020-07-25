@@ -69,14 +69,12 @@ body {
   font-style: normal;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--text-light-theme-color);
 }
 
-.address-item img {
-  width: 16px;
-  height: 12px;
+.address-item svg {
   color: #757575;
-  margin: right 10px;
+  margin-right: 10px;
 }
 
 .active {
@@ -88,18 +86,18 @@ body {
   color: var(--accent-color);
 }*/
 
-.address-tel,
+/*.address-tel,
 .address-emaile {
   color: #757575;
-}
+}*/
 /*HOVER&FOCUS*/
 
 .navigation-list-link:hover,
 .navigation-list-link:focus,
-.address-tel:hover,
-.address-tel:focus,
-.address-emaile:hover,
-.address-emaile:focus {
+.address-tel .address-tel-svg:hover,
+.address-tel .address-tel-svg:focus,
+.address-emaile .address-emaile-svg:hover,
+.address-emaile .address-emaile-svg:focus {
   color: var(--accent-color);
 }
 
@@ -355,6 +353,7 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid #ececec;
 }
 
 /*лого + навігація*/
@@ -402,9 +401,9 @@ img {
   display: flex;
   align-items: center;
 }
-.address-item-img {
+/*.address-item-img {
   margin-right: 10px;
-}
+} */ /*НАПЕВНЕ ТРЕБА СТЕРТИ ДАНІ ПО IMG І ПРОПИСАТИ ЇХ ЗАНОВО ПО НОВОМУ КЛАСУ*/
 .container-h1 {
   flex-grow: 1;
   display: block;
@@ -734,19 +733,20 @@ img {
 
 /*Декоративні ефекти + Векторна графіка*/
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-.navigation-line::after {
+.navigation-line-studio::after {
   display: block;
   background-color: var(--accent-color);
   width: 47px;
   height: 4px;
-  left: 454px;
-  top: 76px;
-  margin-top: 28px;
+  content: "";
+  border-radius: 2px;
+}
+
+.navigation-line-portfolio::after {
+  display: block;
+  background-color: var(--accent-color);
+  width: 77px;
+  height: 4px;
   content: "";
   border-radius: 2px;
 }
@@ -764,3 +764,16 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+
+/*.standards-list-item-svg {
+  display: inline-block;
+  height: 120px;
+  width: 270px;
+  background-color: var(--secondary-white-color);
+}*/
+
+/*.standards-list-item-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/
