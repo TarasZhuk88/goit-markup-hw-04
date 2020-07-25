@@ -435,6 +435,7 @@ img {
 }
 
 /*наші стандарти*/
+
 .standards {
   padding-top: 94px;
   padding-bottom: 47px;
@@ -732,6 +733,23 @@ img {
 }
 
 /*Декоративні ефекти + Векторна графіка*/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.navigation-line::after {
+  display: block;
+  background-color: var(--accent-color);
+  width: 47px;
+  height: 4px;
+  left: 454px;
+  top: 76px;
+  margin-top: 28px;
+  content: "";
+  border-radius: 2px;
+}
 
 .decorative-img {
   background-image: linear-gradient(
