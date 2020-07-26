@@ -72,8 +72,16 @@ body {
   color: var(--text-light-theme-color);
 }
 
+.address-emaile,
+.address-tel {
+  fill: #757575;
+}
+.address-item a:hover,
+.address-item a:focus {
+  color: var(--accent-color);
+}
+
 .address-item svg {
-  color: #757575;
   margin-right: 10px;
 }
 
@@ -86,18 +94,10 @@ body {
   color: var(--accent-color);
 }*/
 
-/*.address-tel,
-.address-emaile {
-  color: #757575;
-}*/
 /*HOVER&FOCUS*/
 
 .navigation-list-link:hover,
-.navigation-list-link:focus,
-.address-tel .address-tel-svg:hover,
-.address-tel .address-tel-svg:focus,
-.address-emaile .address-emaile-svg:hover,
-.address-emaile .address-emaile-svg:focus {
+.navigation-list-link:focus {
   color: var(--accent-color);
 }
 
@@ -401,9 +401,7 @@ img {
   display: flex;
   align-items: center;
 }
-/*.address-item-img {
-  margin-right: 10px;
-} */ /*НАПЕВНЕ ТРЕБА СТЕРТИ ДАНІ ПО IMG І ПРОПИСАТИ ЇХ ЗАНОВО ПО НОВОМУ КЛАСУ*/
+
 .container-h1 {
   flex-grow: 1;
   display: block;
