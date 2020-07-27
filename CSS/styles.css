@@ -8,6 +8,7 @@
   --text-light-theme-color: #757575;
   --btn-background-portfolio: #f5f4fa;
   --secondary-bg-color: #f5f4fa;
+  --solcial-icon-white-color: #ffffff;
 }
 
 html {
@@ -547,9 +548,9 @@ img {
   margin-left: 32px;
 }
 
-.social-list-item {
+/*.social-list-item {
   padding: 12px;
-}
+}*/ /*Якщо повенрнути ті падінги то воно все сильно посунеться повязано з svg описом її розмірів */
 
 .social-list-item:not(:last-child) {
   margin-right: 10px;
@@ -789,7 +790,15 @@ img {
 
 /*Соціальні іконки*/
 
-.social-list-item {
+/*.social-list-item {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}*/
+.solcial-link-item {
   display: block;
   width: 44px;
   height: 44px;
@@ -797,6 +806,79 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .solcial-icon-svg {
   fill: #afb1b8;
+}
+.solcial-link-item:hover,
+.solcial-link-item:focus {
+  background-color: var(--accent-color);
+}
+.solcial-link-item:hover .solcial-icon-svg,
+.solcial-icon-svg:focus {
+  fill: var(--solcial-icon-white-color);
+}
+.solcial-link-item:focus .solcial-icon-svg 
+ {
+  fill: var(--solcial-icon-white-color);
+}
+
+/*постійні клієнти */
+
+.regular-customers-dr {
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+}
+.regular-customers-dr:hover,
+.regular-customers-dr:focus {
+  border-color: var(--accent-color);
+}
+.regular-customers-svg {
+ fill: #AFB1B8;
+}
+.regular-customers-dr:hover .regular-customers-svg,
+.regular-customers-dr:focus .regular-customers-svg {
+  fill: var(--accent-color);
+}
+.regular-customers-link:focus .regular-customers-dr {
+  border-color: var(--accent-color)
+}
+.regular-customers-link:focus .regular-customers-svg {
+  fill: var(--accent-color);
+}
+
+/*footer svg*/
+.footer-icon-link{
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.vidstan-icon-footer {
+  display: flex;
+}
+.join-social-link ul {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.footter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plane-icon-send {
+  margin-left: 10px;
 }
